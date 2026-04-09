@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vulnerable-app
-  namespace: lightspeed-demo
+  namespace: gitops-demo
   labels:
     app: vulnerable-app
 spec:
