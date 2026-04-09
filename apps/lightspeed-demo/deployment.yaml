@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: web
-          image: docker.io/library/nginx:1.21
+          image: registry.access.redhat.com/ubi9/nginx-126:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8080
