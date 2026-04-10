@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.access.redhat.com/ubi8/ubi-minimal:8.6
+          image: registry.access.redhat.com/ubi9/ubi-minimal:latest
           command: ["sleep", "infinity"]
