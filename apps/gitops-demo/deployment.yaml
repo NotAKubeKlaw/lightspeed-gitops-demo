@@ -16,7 +16,6 @@ spec:
         app: vulnerable-app
     spec:
       containers:
-        - name: web
-          image: docker.io/library/nginx:1.21
-          ports:
-            - containerPort: 80
+        - name: app
+          image: registry.access.redhat.com/ubi8/ubi-minimal:8.6
+          command: ["sleep", "infinity"]
