@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vulnerable-app
+  namespace: gitops-advisory-demo
+  labels:
+    app: vulnerable-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vulnerable-app
+  template:
+    metadata:
+      labels:
+        app: vulnerable-app
+    spec:
+      containers:
+        - name: app
+          image: registry.access.redhat.com/ubi8/ubi-minimal:8.6
+          command: ["sleep", "infinity"]
